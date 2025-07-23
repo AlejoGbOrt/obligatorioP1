@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="/scripts/clases.js"></script>
+    <script src="/scripts/system.js"></script>
+    <script src="/scripts/index.js"></script>
+
+    <title>Obligatorio Programacion 1</title>
+</head>
+<body>
+    <header>
+           <img id="logo" src="https://p1.develotion.com/logo.jpg" alt="logo" />
+            <nav>
+                <ul id='navCliente' class="nav">
+                    <li id="paseo"><a>Pasear</a></li>
+                    <li id="solicitudes"><a>Solicitudes Activas</a></li>
+                    <li id="paseadores"><a>Paseadores</a></li>
+                    <li id="logoutCliente"><a>Cerrar Sesion</a></li>
+                </ul>
+
+                <ul id='navPaseador' class="nav">
+                    <li id="paseosPendientesNav"><a>Paseos Pendientes</a></li>
+                    <li id="paseosAceptadosNav"><a>Paseos Aceptados</a></li>
+                    <li id="logoutPaseador"><a>Cerrar Sesion</a></li>
+                </ul>
+            </nav>
+    </header>
+    
+    <main>
+        <section id='login' class="log">
+            <div id="contenedor">
+                <h2>Inicio de Sesion</h2>
+                <p id="msjErrorLogin"></p>
+                <label for="txtUserLogin">Usuario</label>
+                <input type="text" name="" id="txtUserLogin"> <br>
+        
+                <label for="txtPassLogin">Contraseña</label>
+                <input type="password" name="" id="txtPassLogin"> <br>
+        
+                <input type="button" name="" id="btnLogin" value="Iniciar Sesion"><br>
+
+                <p>Aun no tienes cuenta?</p>
+                
+                <input type="button" name="" id="btnToSignup" value="Registrarme">
+            </div>
+        </section>
+
+        <section id="signup" class="log">
+             <div id="contenedor">
+                <h2>Registro</h2>
+                <p id="msjErrorLoginSignup"></p>
+                <label for="txtUserSignup">Usuario</label>
+                <input type="text" name="" id="txtUserSignup"> <br>
+        
+                <label for="txtPassSignup">Contraseña</label>
+                <input type="password" name="" id="txtPassSignup"> <br>
+
+                <label for="txtNombreSignup">Nombre del Perro</label>
+                <input type="text" name="" id="txtNombreSignup"> <br>
+
+                <label for="slcTamanoSignup">Tamaño del Perro</label>
+                <select name="" id="slcTamanoSignup">
+                    <option value="0">--Seleccionar--</option>
+                    <option value="1">Chico</option>
+                    <option value="2">Mediano</option>
+                    <option value="4">Grande</option>
+                </select> <br>
+                
+                <input type="button" name="" id="btnSignup" value="Registrarme">
+
+                <p>Ya tienes una cuenta? Inicia sesion</p>
+
+                <input type="button" name="" id="btnToLogin" value="Iniciar Sesion">
+            </div>
+        </section>
+
+        <section id="interfazPaseador">
+
+            <article id='paseosPendientesPaseador' class="articlePaseador">
+                <h2>Paseos Pendientes</h2>
+                  <table>
+                    <thead>
+                        <tr>
+                            <th>N Solicitud</th>
+                            <th>Nombre del Perro</th>
+                            <th>Tamaño</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyPendientes">
+                       
+                    </tbody>
+                  </table>
+            </article>
+
+            <article id="paseosAceptadosPaseador" class="articlePaseador">
+                <h2>Paseos Aceptados</h2>
+                <p id="cuposOcupados">Cupos Ocupados: </p>
+                <p id="cuposMaximo">Limite de Cupos: </p>
+                <p id="porcentajeOcupado">Ocupacion: </p>
+
+                <div class="listaPaseosAceptados">
+                    <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre del Perro</th>
+                            <th>Tamaño</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyAceptados">
+                       
+                    </tbody>
+                  </table>
+                </div>
+            </article>
+
+        </section>
+
+        <section id="interfazCliente">
+                       
+            <article id='solicitarPaseo' class="articleCliente">
+                <h2>Solicitar un Paseo</>
+                <h3 id="msjBienvenida"></h3><br>
+            
+                <label for="slcPaseador">Por favor, elije entre los paseadores disponibles</label>
+                <select id="slcPaseador">
+                <option value="">--Seleccionar--</option>
+                </select> <br>
+
+                <input type="button" name="" id="btnProcesarSolicitud" value="Realizar Solicitud">
+
+            </article>
+
+            <article id="paseosPendientes" class="articleCliente">
+                <h2>Solicitudes en Curso</h2>
+                <div id="sinSolicitud" class="solicitudes">
+                    <p>Por el momento no tienes ninguna solicitud pendiente.</p>
+                </div>
+
+                <div id="conSolicitud" class="solicitudes">
+                    <p id="estadoSolicitud"></p>
+                    <p id="paseadorSolicitud">Estara a cargo de: </p>
+                    <input type="button" name="" id="btnCancelarSolicitud" value="Cancelar Solicitud">
+                </div>
+            </article>
+
+            <article id="verPaseadores" class="articleCliente">
+                <h2>Nuestros Paseadores<h2/>
+                  <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre de Paseador</th>
+                            <th>Paseos Activos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyCliente">
+                        
+                    </tbody>
+                  </table>
+            </article>
+
+        </section>
+    </main>
+
+
+</body>
+</html>
